@@ -1,8 +1,8 @@
 import React, { useContext, useState, Fragment } from "react";
-import Wrapper from "../styles/Wrapper";
-import { MainStore } from "../store";
-import pageCatlog from "../config/page.json";
-import iconCatlog from "../config/icon.json";
+import Wrapper from "../../styles/Wrapper";
+import { MainStore } from "../../store";
+import pageCatlog from "../../config/page.json";
+import iconCatlog from "../../config/icon.json";
 
 /*
 Navigation Bar
