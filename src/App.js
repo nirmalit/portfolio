@@ -5,12 +5,7 @@ import './app.css'
 import colorCatlog from './config/color.json'
 import pageCatlog from './config/page.json'
 
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Works from './components/Works'
-import AboutMe from './components/AboutMe'
-import Contacts from './components/Contacts'
-
+import {Home, Contacts , Navbar , AboutMe , Work } from './components'
 import { MainStore } from './store'
 
 const App = () => {
@@ -30,7 +25,7 @@ const App = () => {
       </div>
       {/* WORKS COMPONENT */}
       <div id = {pageCatlog.works} className='h-full'>
-        <Works />
+        <Work />
       </div>
       {/* ABOUT-ME COMPONENT */}
       <div id = {pageCatlog.about} className='h-full'>
