@@ -1,5 +1,5 @@
 import React, { useContext, useState, Fragment } from "react";
-import Wrapper from "../../styles/Wrapper";
+import { Wrapper } from "../../styles";
 import { MainStore } from "../../store";
 import pageCatlog from "../../config/page.json";
 import iconCatlog from "../../config/icon.json";
@@ -181,7 +181,7 @@ const Navbar = ({ colors }) => {
   );
 
   const SocialMediaContent= () =>(
-    <div className="flex justify-evenly">
+    <div className="flex md:flex-col justify-evenly md:h-[150px]">
       <div>
         <ShowIcon iconName={iconCatlog.email}/>
       </div>
@@ -223,6 +223,11 @@ const Navbar = ({ colors }) => {
 
   return (
     <Wrapper>
+      <div className="hidden md:block flex justify-center fixed left-4 top-0">
+        <div className="bg-black w-[2px] h-[190px] ml-4">
+        </div>
+        <SocialMediaContent />
+      </div>
       <div className="flex inline-block relative">
         {/* Left Side with LOGO & NAME */}
         <div className="md:w-1/5 font-mono">Nirmal Kumar</div>
