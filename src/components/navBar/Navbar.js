@@ -130,15 +130,15 @@ const Navbar = ({ colors }) => {
       <div
         role="button"
         className={
-          activePage === pageCatlog.works ? onTabActive : onTabInActive
+          activePage === pageCatlog.work ? onTabActive : onTabInActive
         }
         onClick={(e) => {
-          activatePage(e, pageCatlog.works);
+          activatePage(e, pageCatlog.work);
         }}
       >
         <span style={{ color: colors.pink }}>#</span>
         <span
-          style={activePage === pageCatlog.works ? { color: colors.white } : {}}
+          style={activePage === pageCatlog.work ? { color: colors.white } : {}}
         >
           works
         </span>
@@ -162,16 +162,16 @@ const Navbar = ({ colors }) => {
       <div
         role="button"
         className={
-          activePage === pageCatlog.contacts ? onTabActive : onTabInActive
+          activePage === pageCatlog.contact ? onTabActive : onTabInActive
         }
         onClick={(e) => {
-          activatePage(e, pageCatlog.contacts);
+          activatePage(e, pageCatlog.contact);
         }}
       >
         <span style={{ color: colors.pink }}>#</span>
         <span
           style={
-            activePage === pageCatlog.contacts ? { color: colors.white } : {}
+            activePage === pageCatlog.contact ? { color: colors.white } : {}
           }
         >
           contacts
@@ -214,7 +214,7 @@ const Navbar = ({ colors }) => {
   const MinScreenNavContent = () => (
     <div
       className="flex flex-col justify-evenly md:hidden h-screen"
-      style={{ color: colors.gray }}
+      style={{ color: colors.gray,backgroundColor : colors.dark_blue }}
     >
       <NavContent />
       <SocialMediaContent />
@@ -223,12 +223,13 @@ const Navbar = ({ colors }) => {
 
   return (
     <Wrapper>
+      {/* Max screen Socialmedia Icons*/}
       <div className="hidden md:block flex justify-center fixed left-4 top-0">
         <div className="bg-black w-[2px] h-[190px] ml-4">
         </div>
         <SocialMediaContent />
       </div>
-      <div className="flex inline-block relative">
+      <div className="flex inline-block relative py-4" style={{backgroundColor : colors.dark_blue}}>
         {/* Left Side with LOGO & NAME */}
         <div className="md:w-1/5 font-mono">Nirmal Kumar</div>
         {/* Right Side with Nav Button */}

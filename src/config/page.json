@@ -1,6 +1,6 @@
 {
     "home" : "HOME",
-    "works" : "WORKS",
+    "work" : "WORK",
     "about" : "ABOUT_ME",
-    "contacts" : "CONTACTS"
+    "contact" : "CONTACT"
 }
