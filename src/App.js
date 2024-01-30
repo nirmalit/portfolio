@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './tailwind_import.css'
 import './app.css'
 
@@ -12,29 +12,49 @@ import { Wrapper } from './styles'
 const App = () => {
   
   const [globalState, setGlobalState] = useState({
-    activePage : "HOME"
+    activePage : pageCatlog.home
   })
+
+  let idRefs = {}
+  idRefs[pageCatlog.home] = useRef(null)
+  idRefs[pageCatlog.work] = useRef(null)
+  idRefs[pageCatlog.about] = useRef(null)
+  idRefs[pageCatlog.contact] = useRef(null)
+
+  const updateActivePage = (pageName) =>{
+    console.log(pageName)
+    if(pageName !== globalState.activePage) setGlobalState({...globalState, activePage : pageName })
+  }
+
+  useEffect(()=>{
+    
+    idRefs[globalState.activePage].current.scrollIntoView({
+      behavior : 'smooth'
+    })
+
+  }, [globalState])
+
 
   return (
     <MainStore.Provider value={{globalState, setGlobalState}}> 
-      <div className='w-full h-full fixed'>
+      <div className='w-full h-full sticky top-0'>
         <Navbar colors={{...colorCatlog}} />
       </div>
       <Wrapper>
         {/* HOME COMPONENT */}
-        <div id = {pageCatlog.home} className='w-full h-full mt-8'>
+        <div id = {pageCatlog.home} className='w-full h-full' ref = {idRefs[pageCatlog.home]} onWheel={()=>updateActivePage(pageCatlog.home)} >
           <Home />
         </div>
         {/* WORKS COMPONENT */}
-        <div id = {pageCatlog.works} className='w-full h-full'>
+        <div id = {pageCatlog.work} className='w-full h-full' ref = {idRefs[pageCatlog.work]} onWheel={()=>updateActivePage(pageCatlog.work)} >
           <Work />
         </div>
         {/* ABOUT-ME COMPONENT */}
-        <div id = {pageCatlog.about} className='w-full h-full'>
+        <div id = {pageCatlog.about} className='w-full h-full' ref = {idRefs[pageCatlog.about]} onWheel={()=>updateActivePage(pageCatlog.about)} >
           <AboutMe />
         </div>
         {/* HOME COMPONENT */}
-        <div id = {pageCatlog.contacts} className='w-full h-full'>
+        <div id = {pageCatlog.contact} className='w-full h-full' ref = {idRefs[pageCatlog.contact]} onWheel={()=>updateActivePage(pageCatlog.contact)} >
           <Contacts />
         </div>
       </Wrapper>
