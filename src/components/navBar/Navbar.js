@@ -3,6 +3,7 @@ import { Wrapper } from "../../styles";
 import { MainStore } from "../../store";
 import pageCatlog from "../../config/page.json";
 import iconCatlog from "../../config/icon.json";
+import urlCatlog from '../../config/url.json'
 
 /*
 Navigation Bar
@@ -179,16 +180,19 @@ const Navbar = ({ colors }) => {
       </div>
     </Fragment>
   );
-
+  
+  const openInNewTab= (url) =>{
+    window.open(url, "_blank")
+  }
   const SocialMediaContent= () =>(
     <div className="flex md:flex-col justify-evenly md:h-[150px]">
-      <div>
+      <div role="button" onClick={()=>openInNewTab(urlCatlog.email)}>
         <ShowIcon iconName={iconCatlog.email}/>
       </div>
-      <div>
+      <div role="button" onClick={()=>openInNewTab(urlCatlog.github)}>
         <ShowIcon iconName={iconCatlog.github}/>
       </div>
-      <div>
+      <div role="button" onClick={()=>openInNewTab(urlCatlog.linkedin)}>
         <ShowIcon iconName={iconCatlog.linkedin}/>
       </div>
     </div>
