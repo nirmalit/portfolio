@@ -42,7 +42,7 @@ const App = () => {
       </div>
       <Wrapper>
         {/* HOME COMPONENT */}
-        <div id = {pageCatlog.home} className='w-full h-full' ref = {idRefs[pageCatlog.home]} onWheel={()=>updateActivePage(pageCatlog.home)} >
+        <div id = {pageCatlog.home} className='w-full h-screen lg:h-[90vh] lg:p-5 mt-4' ref = {idRefs[pageCatlog.home]} onWheel={()=>updateActivePage(pageCatlog.home)} >
           <Home />
         </div>
         {/* WORKS COMPONENT */}
