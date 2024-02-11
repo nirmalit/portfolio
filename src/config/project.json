@@ -1,0 +1,23 @@
+[
+    {
+        "projectName" : "BDC Submission",
+        "techList" : ["pyspark" , "Datalake", "Databricks"],
+        "shortSummary" : "Data-Driven FCC Broadband Analysis",
+        "details summary" : "TODO",
+        "projectLogo" : "BDC"
+    },
+    {
+        "projectName" : "Parker",
+        "techList" : [ "React", "Flask", "ArcGis", "Bootstrap" ],
+        "shortSummary" : "Interactive Serviceability Mapping Application",
+        "details summary" : "TODO",
+        "projectLogo" : "PARKER"
+    },
+    {
+        "projectName" : "FMP",
+        "techList" : [  "ML", "object-detection" ],
+        "shortSummary" : "Locating Power Sources with Object Detection",
+        "details summary" : "TODO",
+        "projectLogo" : "FMP"
+    }
+]

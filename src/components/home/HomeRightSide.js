@@ -4,7 +4,7 @@ import homeImage from '../../assets/person/home_right_final.png'
 const HomeRightSide = () => {
   return (
     <div className='p-2'>
-        <img src={homeImage} alt="" className='xs:h-[259px] xs:w-[316px] lg:h-[396px] lg:w-[479px] xl:h-[496px] xl:w-[579px]'/>
+        <img src={homeImage} alt="" className='xs:h-[259px] xs:w-[316px] md:h-[279px] md:w-[336px] lg:h-[396px] lg:w-[479px] xl:h-[496px] xl:w-[579px]'/>
     </div>
   )
 }
