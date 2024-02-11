@@ -1,4 +1,4 @@
+import SkillCard from "./SkillCard";
 import ImageCard from "./ImageCard";
 
-
-export { ImageCard }
+export { SkillCard , ImageCard}

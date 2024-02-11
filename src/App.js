@@ -22,7 +22,7 @@ const App = () => {
   idRefs[pageCatlog.contact] = useRef(null)
 
   const updateActivePage = (pageName) =>{
-    console.log(pageName)
+    // console.log(pageName)
     if(pageName !== globalState.activePage) setGlobalState({...globalState, activePage : pageName })
   }
 

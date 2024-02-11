@@ -23,7 +23,7 @@ const ImageCard = ({contentImage, tagList = [], contentTitle, contentSummary}) =
 
     return (
         <div className='w-full h-full flex flex-wrap justify-evenly items-center font-mono from-neutral-400'>
-            { tagList.map((eachTag) => <div><p>{eachTag}</p></div>)}
+            { tagList.map((eachTag,i) => <div key={i}><p>{eachTag}</p></div>)}
         </div>
     )    
   }
@@ -37,7 +37,7 @@ const ImageCard = ({contentImage, tagList = [], contentTitle, contentSummary}) =
     )
   }
   return (
-    <div className='w-[300px] h-[415px] p-4 lg:p-1'>
+    <div className='w-[320px] h-[415px] p-4 lg:p-1'>
         {/* TOP  - Image */}
         <div className='h-1/2 w-full border-[1px] border-slate-50'>
             <TopComponent />

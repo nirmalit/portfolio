@@ -1,0 +1,32 @@
+[
+    {
+        "contentTitle" : "Languages" ,
+        "contentList" : [
+            "Python", "Javascript"
+        ]
+    },
+    {
+        "contentTitle" : "Databases" ,
+        "contentList" : [
+            "Oracle", "Mongodb"
+        ]
+    },
+    {
+        "contentTitle" : "Tools & Technology" ,
+        "contentList" : [
+            "Databricks", "AWS" ,"Figma","Datalake", "NodeJs", "ArcPro"
+        ]
+    },
+    {
+        "contentTitle" : "others" ,
+        "contentList" : [
+            "Pandas","GeoPandas","Git","UI Design"
+        ]
+    },
+    {
+        "contentTitle" : "Frameworks" ,
+        "contentList" : [
+            "Pyspark","React", "Flask", "Fast API", "Express Js", "Bootstrap","Tailwind css"
+        ]
+    }
+]

@@ -2,6 +2,7 @@ import React from 'react'
 import { PageTitle } from '../pageTitle'
 import { ImageCard } from '../card'
 import projectCatlog from '../../config/project.json'
+import Skills from './Skills'
 const Work = () => {
 
   const ProjectCards = ({ projectInfo }) =>{
@@ -15,15 +16,17 @@ const Work = () => {
     )
   }
   return (
-    <div className='h-full lg:h-screen'>
+    <div className='h-full'>
       <PageTitle titleName = "projects" redirectionUrl = {true} />
 
       {/* Project List in cards  */}
       <div className='h-4/5 my-2 w-full h-full flex flex-wrap justify-around items-center'>
         {
-          projectCatlog.map((eachProject)=> <ProjectCards projectInfo = {eachProject} />)
+          projectCatlog.map((eachProject, i)=> <ProjectCards key = {i} projectInfo = {eachProject} />)
         }
       </div>
+      <PageTitle titleName = "skills" />
+      <Skills />
     </div>
   )
 }
