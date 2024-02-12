@@ -28,11 +28,11 @@ const Skills = () => {
     }
 
   return (
-    <div className='w-full h-full md:flex pt-2'>        
+    <div className='w-full h-full md:flex pt-3 pb-8'>        
         <div className="w-full md:w-1/2">
             <LeftSide />
         </div>
-        <div className="hidden md:block w-full md:w-1/2 ">
+        <div className="hidden md:block w-full md:w-1/2 p-2">
             <RightSide/>
         </div>
     </div>

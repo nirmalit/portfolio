@@ -3,9 +3,23 @@ import colorCatlog from '../../config/color.json'
 
 const PageTitle = ({ titleName , redirectionUrl = false }) =>{
 
-    const rightSideStyle = redirectionUrl? `w-1/5 flex justify-end` : `w-1/5 invisible`
+    const mainDivStyle = redirectionUrl? `flex justify-around w-full font-mono` : `flex w-full font-mono`
+    const RightSide = () => {
+        return(
+            <div className="w-1/5 flex justify-end">
+                <div className='flex' role='button'>
+                    <div className='hidden md:block w-[100 px] h-[20px]'>
+                        <p>view all</p>
+                    </div>
+                    <div style={{letterSpacing : "-0.21em"}}>
+                        <p>{`~~>`}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
     return (
-        <div className='flex justify-around w-full font-mono'> 
+        <div className={mainDivStyle}> 
             {/* left side  */}
             <div className=" w-4/5 flex items-center">
                 {/* Title name  */}
@@ -18,16 +32,7 @@ const PageTitle = ({ titleName , redirectionUrl = false }) =>{
 
             </div>
             {/* Right Side  */}
-            <div className={rightSideStyle}>
-                <div className='flex' role='button'>
-                    <div className='hidden md:block w-[100 px] h-[20px]'>
-                        <p>view all</p>
-                    </div>
-                    <div style={{letterSpacing : "-0.21em"}}>
-                        <p>{`~~>`}</p>
-                    </div>
-                </div>
-            </div>
+            {redirectionUrl ? <RightSide /> : null}
         </div>
     )
   }

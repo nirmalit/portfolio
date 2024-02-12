@@ -24,7 +24,7 @@ const SkillCard = ({ contentTitle, contentList = [] }) => {
     )
   }
   return (
-    <div className='p-5 w-[250px] h-[140px] p-2 h-auto'>
+    <div className='p-6 w-[250px] h-[150px] md:h-auto'>
         <TopComponent />
         <MainComponent />
     </div>

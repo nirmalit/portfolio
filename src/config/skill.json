@@ -14,7 +14,7 @@
     {
         "contentTitle" : "Tools & Technology" ,
         "contentList" : [
-            "Databricks", "AWS" ,"Figma","Datalake", "NodeJs", "ArcPro"
+            "Databricks", "AWS" ,"Figma","Datalake", "NodeJs", "ArcPro", "jenkins","docker"
         ]
     },
     {
