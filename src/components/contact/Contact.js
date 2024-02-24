@@ -5,6 +5,7 @@ import { ShowIcon } from '../icon'
 import colorCatlog from '../../config/color.json'
 import iconCatlog from '../../config/icon.json'
 import urlCatlog from '../../config/url.json'
+import { Footer } from '../footer'
 
 const Contacts = () => {
 
@@ -27,18 +28,16 @@ const Contacts = () => {
 
   const RightSide = () => {
     return(
-      <div className="p-1 h-full flex flex-wrap w-auto font-mono border-[1px] border-slate-300">
-        <div className="p-2">
-          Message me here
-        </div>
-        <div className="w-full h-full p-2 flex flex-col justify-evenly items-center"  style={{color : colorCatlog.gray }}>
-          <div className='w-full flex justify-start items-center' role="button" onClick={() => openInNewTab(urlCatlog.linkedin)}>
-            <ShowIcon iconName={iconCatlog.linkedin}/>
-            <h2 className='px-2'>nirmal-kumar-nedunchezhiyan</h2>
+      <div className="p-1 h-full flex justify-center items-center flex-wrap">
+        <div className='w-full h-1/2 font-mono border-[1px] border-slate-300'>
+          <div className="p-2">
+            Message me here
           </div>
-          <div className='w-full flex justify-start items-center'>
-            <ShowIcon iconName={iconCatlog.email}/>
-            <h2 className='px-2'>nirmalit151@gmail.com</h2>
+          <div className="w-full h-full p-2 flex flex-col justify-evenly items-center"  style={{color : colorCatlog.gray }}>
+            <div className='w-full flex justify-start items-center'>
+              <ShowIcon iconName={iconCatlog.email}/>
+              <h2 className='px-2'>nirmalit151@gmail.com</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -58,6 +57,7 @@ const Contacts = () => {
           <RightSide />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
