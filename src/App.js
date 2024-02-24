@@ -42,19 +42,19 @@ const App = () => {
       </div>
       <Wrapper>
         {/* HOME COMPONENT */}
-        <div id = {pageCatlog.home} className='w-full h-screen lg:h-[90vh] lg:p-5 mt-4' ref = {idRefs[pageCatlog.home]} onWheel={()=>updateActivePage(pageCatlog.home)} >
+        <div id = {pageCatlog.home} className='w-full h-screen lg:h-[90vh] lg:p-5 mt-4' ref = {idRefs[pageCatlog.home]} onWheel={()=>updateActivePage(pageCatlog.home)} onTouchStart={()=>updateActivePage(pageCatlog.home)} >
           <Home />
         </div>
         {/* WORKS COMPONENT */}
-        <div id = {pageCatlog.work} className='w-full h-full' ref = {idRefs[pageCatlog.work]} onWheel={()=>updateActivePage(pageCatlog.work)} >
+        <div id = {pageCatlog.work} className='w-full h-full' ref = {idRefs[pageCatlog.work]} onWheel={()=>updateActivePage(pageCatlog.work)} onTouchStart={()=>updateActivePage(pageCatlog.work)} >
           <Work />
         </div>
         {/* ABOUT-ME COMPONENT */}
-        <div id = {pageCatlog.about} className='w-full h-full' ref = {idRefs[pageCatlog.about]} onWheel={()=>updateActivePage(pageCatlog.about)} >
+        <div id = {pageCatlog.about} className='w-full h-full' ref = {idRefs[pageCatlog.about]} onWheel={()=>updateActivePage(pageCatlog.about)} onTouchStart={()=>updateActivePage(pageCatlog.about)} >
           <AboutMe />
         </div>
         {/* HOME COMPONENT */}
-        <div id = {pageCatlog.contact} className='w-full h-full' ref = {idRefs[pageCatlog.contact]} onWheel={()=>updateActivePage(pageCatlog.contact)} >
+        <div id = {pageCatlog.contact} className='w-full h-full' ref = {idRefs[pageCatlog.contact]} onWheel={()=>updateActivePage(pageCatlog.contact)} onTouchStart={()=>updateActivePage(pageCatlog.contact)} >
           <Contacts />
         </div>
       </Wrapper>
